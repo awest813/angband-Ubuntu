@@ -517,15 +517,15 @@ depgen:
  list-object-modifiers.h object.h z-quark.h z-dice.h z-expression.h \
  list-elements.h list-origins.h option.h list-options.h \
  list-player-flags.h cave.h list-square-flags.h list-terrain-flags.h \
- list-terrain.h game-world.h init.h datafile.h parser.h \
- list-parser-errors.h monster.h target.h mon-predicate.h mon-timed.h \
- list-mon-timed.h mon-blows.h list-mon-temp-flags.h list-mon-race-flags.h \
- list-mon-spells.h mon-attack.h mon-desc.h mon-group.h mon-lore.h \
- z-textblock.h mon-make.h mon-move.h mon-spell.h mon-util.h mon-msg.h \
- list-mon-message.h obj-desc.h obj-ignore.h list-ignore-types.h \
- obj-knowledge.h obj-pile.h obj-slays.h obj-tval.h obj-util.h \
- player-calcs.h player-timed.h list-player-timed.h player-util.h \
- cmd-core.h project.h source.h list-projections.h trap.h \
+ list-terrain.h game-input.h cmd-core.h game-world.h init.h datafile.h \
+ parser.h list-parser-errors.h monster.h target.h mon-predicate.h \
+ mon-timed.h list-mon-timed.h mon-blows.h list-mon-temp-flags.h \
+ list-mon-race-flags.h list-mon-spells.h mon-attack.h mon-desc.h \
+ mon-group.h mon-lore.h z-textblock.h mon-make.h mon-move.h mon-spell.h \
+ mon-util.h mon-msg.h list-mon-message.h obj-desc.h obj-ignore.h \
+ list-ignore-types.h obj-knowledge.h obj-pile.h obj-slays.h obj-tval.h \
+ obj-util.h player-calcs.h player-timed.h list-player-timed.h \
+ player-util.h project.h source.h list-projections.h trap.h \
  list-trap-flags.h
 ./mon-msg.o: mon-msg.c angband.h h-basic.h z-bitflag.h z-form.h z-virt.h \
  z-color.h z-util.h z-rand.h config.h game-event.h z-type.h message.h \
@@ -1649,11 +1649,12 @@ depgen:
  list-elements.h list-origins.h option.h list-options.h \
  list-player-flags.h cave.h list-square-flags.h list-terrain-flags.h \
  list-terrain.h cmds.h cmd-core.h effects.h source.h player-attack.h \
- list-effects.h generate.h monster.h target.h mon-predicate.h mon-timed.h \
- list-mon-timed.h mon-blows.h list-mon-temp-flags.h list-mon-race-flags.h \
- list-mon-spells.h list-room-flags.h init.h datafile.h parser.h \
- list-parser-errors.h mon-make.h obj-init.h obj-pile.h obj-randart.h \
- list-randart-properties.h obj-tval.h obj-util.h ui-command.h ui-term.h \
+ list-effects.h game-input.h generate.h monster.h target.h \
+ mon-predicate.h mon-timed.h list-mon-timed.h mon-blows.h \
+ list-mon-temp-flags.h list-mon-race-flags.h list-mon-spells.h \
+ list-room-flags.h init.h datafile.h parser.h list-parser-errors.h \
+ mon-make.h obj-init.h obj-pile.h obj-randart.h list-randart-properties.h \
+ obj-slays.h obj-tval.h obj-util.h player-quest.h ui-command.h ui-term.h \
  ui-event.h wizard.h
 ./borg/borg-attack-munchkin.o: borg/borg-attack-munchkin.c \
  borg/borg-attack-munchkin.h borg/../angband.h borg/../h-basic.h \
