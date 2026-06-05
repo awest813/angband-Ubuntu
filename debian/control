@@ -1,0 +1,30 @@
+Source: angband
+Section: games
+Priority: optional
+Maintainer: Angband Dev Team <bugs@rephial.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ autoconf,
+ automake,
+ libncursesw5-dev | libncurses-dev,
+ libx11-dev,
+ libxft-dev,
+ libsdl2-dev,
+ libsdl2-image-dev,
+ libsdl2-mixer-dev,
+ libsdl2-ttf-dev,
+Standards-Version: 4.6.2
+Homepage: https://angband.github.io/angband/
+Vcs-Git: https://github.com/awest813/angband-Ubuntu.git
+Vcs-Browser: https://github.com/awest813/angband-Ubuntu
+
+Package: angband
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Single-player dungeon exploration game (the classic roguelike)
+ Angband is a graphical dungeon adventure game that uses textual characters
+ to represent the walls and floors of a dungeon and the inhabitants therein,
+ in the tradition of games like NetHack and Rogue.
+ .
+ The player descends into the depths of the dungeon, fighting monsters and
+ collecting equipment, until they are ready to face Morgoth, Lord of Darkness.
