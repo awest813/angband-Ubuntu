@@ -5,9 +5,15 @@ export DH_VERBOSE = 1
 %:
 	dh $@
 
+override_dh_auto_clean:
+	@if [ -f config.status ]; then \
+		dh_auto_clean; \
+	fi
+
 override_dh_auto_configure:
 	./autogen.sh
 	dh_auto_configure -- \
+		--prefix=/usr \
 		--enable-curses \
 		--enable-x11 \
 		--enable-sdl2 \
@@ -16,3 +22,6 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/angband
+
+# dwz fails on .debug_addr sections produced by current GCC.
+override_dh_dwz:
