@@ -1,0 +1,31 @@
+name: Debian Package
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  build:
+    name: Build .deb
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            debhelper devscripts build-essential fakeroot \
+            autoconf automake \
+            libncurses-dev libx11-dev libxft-dev \
+            libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+
+      - name: Clone project
+        uses: actions/checkout@v6
+
+      - name: Build binary package
+        run: dpkg-buildpackage -us -uc -b
+
+      - name: Verify package contents
+        run: |
+          dpkg-deb -c ../angband_*.deb | grep -E '/usr/games/angband$'
+          dpkg-deb -c ../angband_*.deb | grep -E '/usr/share/man/man6/angband\.6\.gz$'

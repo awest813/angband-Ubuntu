@@ -42,7 +42,7 @@ export DEBFULLNAME DEBEMAIL
 # ── resolve BASE_VER from changelog if not set ───────────────────────────────
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+REPO_ROOT="$SCRIPT_DIR"
 CHANGELOG="$REPO_ROOT/debian/changelog"
 
 [[ -f "$CHANGELOG" ]] || die "debian/changelog not found at $CHANGELOG"
